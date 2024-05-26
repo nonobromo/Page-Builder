@@ -1,4 +1,6 @@
 const page = document.querySelector("#page");
+const clearBtn = document.querySelector("#clear-btn");
+const gameAlert = document.querySelector(".game-alert");
 
 let type, params;
 
@@ -138,9 +140,32 @@ function savePage() {
     }
     localStorage.setItem("els", JSON.stringify(ellArr));
     localStorage.style = page.attributes.style?.value;
-
+    gameAlert.innerHTML = "Page Saved";
+    alertMsg();
 }
 
+clearBtn.addEventListener("click", clearPage);
+
+
+function clearPage() {
+    page.removeAttribute("style");
+    page.innerHTML = "";
+    localStorage.clear();
+    gameAlert.innerHTML = "Page Cleared";
+    alertMsg();
+}
+
+function alertMsg() {
+    setTimeout(() => {
+        gameAlert.style.transform = "translateY(0px)";
+        gameAlert.style.transition = "400ms";
+    }, 10)
+
+    setTimeout(() => {
+        gameAlert.style.transform = "translateY(-100px)";
+        gameAlert.style.transition = "400ms";
+    }, 2000)
+}
 
 function init() {
 

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     overflow-x: hidden;
     font-family: "Madimi One", sans-serif;
@@ -111,7 +115,7 @@ nav>a {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    height: 160px;
+    height: 200px;
 }
 
 #elements {
@@ -135,6 +139,20 @@ button {
     font-size: 20px;
 }
 
+.game-alert {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-20px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+    background-color: rgb(141, 141, 141);
+    color: white;
+    font-size: 24px;
+}
+
 @media screen and (max-width:1300px) {
     .container {
         display: flex;
@@ -149,7 +167,7 @@ button {
     #elements {
         width: 300px;
         margin: auto;
-        height: 100px;
+        height: 120px;
         overflow: scroll;
     }
 }
