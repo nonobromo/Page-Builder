@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div id="panelside">
+            <h1 class="main-head">Page Builder</h1>
+            <nav>
+                <a class="active" onclick="changeScreen('settings', this)">Settings</a>
+                <a onclick="changeScreen('elements', this)">Elements</a>
+            </nav>
+
+            <div id="settings" class="show">
+                <div class="field">
+                    <label for="">Background Color</label>
+                    <input type="color" oninput="changeBg(this)">
+                </div>
+
+                <div class="field">
+                    <label for="">Page Padding</label>
+                    <input type="number" oninput="changePad(this)">
+                </div>
+            </div>
+
+            <div id="elements">
+                <div class="field">
+                    <label for="">elements</label>
+                    <select oninput="showParams(this)">
+                        <option value=""></option>
+                        <option value="title">Header (h1-h6)</option>
+                        <option value="p">Paragragh</option>
+                        <option value="input">Input</option>
+                        <option value="button">Button</option>
+                    </select>
+                </div>
+
+                <div id="parameters">
+                    <div id="headings" class="field">
+                        <select>
+                            <option>h1</option>
+                            <option>h2</option>
+                            <option>h3</option>
+                            <option>h4</option>
+                            <option>h5</option>
+                            <option>h6</option>
+                        </select>
+                    </div>
+
+                    <div id="input-type" class="field">
+                        <select>
+                            <option value="text">Text</option>
+                            <option value="number">Number</option>
+                            <option value="date">Date</option>
+                            <option value="time">Time</option>
+                        </select>
+                    </div>
+
+                    <div id="shadow-stats" class="field">
+                        <div class="shadow-params">
+                            <label for="">Shadow</label>
+                            <label for="">X Axis</label>
+                            <input id="shadowX" type="text">
+                            <label for="">Y Axis</label>
+                            <input id="shadowY" type="text">
+                            <label for="">Shadow Background Color</label>
+                            <input id="shadowBg" type="color">
+                        </div>
+                    </div>
+
+                    <div id="font-size" class="field">
+                        <label for="">Font-Size</label>
+                        <input type="number">
+                    </div>
+
+                    <div id="width" class="field">
+                        <label for="">Width</label>
+                        <input type="number">
+                    </div>
+
+                    <div id="height" class="field">
+                        <label for="">Height</label>
+                        <input type="number">
+                    </div>
+
+                    <div id="color" class="field">
+                        <label for="">Font Color</label>
+                        <input type="color">
+                    </div>
+
+                    <div id="bg-color" class="field">
+                        <label for="">Background-Color</label>
+                        <input type="color">
+                    </div>
+
+                    <div id="content" class="field">
+                        <label for="">Text Content</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <button onclick="addEl()">Add Element</button>
+                <button>Save Element</button>
+            </div>
+        </div>
+        <div id="main">
+            <div id="page" contenteditable="true"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

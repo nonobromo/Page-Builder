@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+body {
+    overflow-x: hidden;
+    font-family: "Madimi One", sans-serif;
+}
+
+.container {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+#panelside {
+    background-color: gray;
+}
+
+
+#panelside>div {
+    display: none;
+}
+
+#panelside>div.show {
+    display: block;
+}
+
+#main {
+    background-color: #e0e0e0;
+    overflow-y: auto;
+}
+
+#page {
+    max-width: 800px;
+    min-height: 800px;
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #b4b4b4;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.main-head {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.field>label {
+    color: white;
+    font-size: 24px;
+}
+
+.field>input {
+    width: 280px;
+    height: 30px;
+}
+
+.field>select {
+    width: 280px;
+    height: 30px;
+}
+
+.field>.shadow-params {
+    display: flex;
+    flex-direction: column;
+}
+
+#shadow-stats>div>label:nth-child(1) {
+    color: white;
+    font-size: 24px;
+}
+
+.shadow-params>input {
+    width: 100px;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+nav>a {
+    background-color: silver;
+    font-size: 28px;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+#parameters>div {
+    display: none;
+}
+
+#parameters>div.show {
+    display: block;
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 160px;
+}
+
+#elements {
+    display: none;
+}
+
+.main {
+    background-color: #e0e0e0;
+    overflow-y: auto;
+}
+
+.active {
+    background-color: #74E291;
+}
+
+.added-el {
+    outline: none;
+}
+
+button {
+    font-size: 20px;
+}
+
+@media screen and (max-width:1300px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #panelside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #elements {
+        width: 300px;
+        margin: auto;
+        height: 100px;
+        overflow: scroll;
+    }
+}
