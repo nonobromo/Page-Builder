@@ -63,8 +63,6 @@ function showParams(elem) {
     type = elem.value;
     params = elementSelect[type];
 
-    console.log(params);
-
     const divHide = document.querySelectorAll('#parameters>div');
 
     for (const divs of divHide) {
