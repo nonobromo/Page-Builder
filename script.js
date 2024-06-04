@@ -21,7 +21,6 @@ const elementSelect = {
         'height',
         'bg-color',
         'shadow-stats',
-
     ],
     input: [
         'input-type',
