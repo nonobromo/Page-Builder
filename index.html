@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="init()">
+<body>
     <div class="container">
         <span class="game-alert"></span>
         <div id="panelside">
@@ -17,7 +17,6 @@
                 <a class="active" onclick="changeScreen('settings', this)">Settings</a>
                 <a onclick="changeScreen('elements', this)">Elements</a>
             </nav>
-
             <div id="settings" class="show">
                 <div class="field">
                     <label for="">Background Color</label>
@@ -106,7 +105,7 @@
                         <input type="text">
                     </div>
                 </div>
-                <button onclick="addEl()">Add Element</button>
+                <button onclick="addEl()" id="add-btn">Add Element</button>
                 <button>Save Element</button>
             </div>
         </div>

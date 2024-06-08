@@ -165,7 +165,6 @@ function alertMsg() {
 }
 
 function init() {
-
     if (localStorage.els) {
         const addedEl = JSON.parse(localStorage.els);
         for (const add of addedEl) {
@@ -175,3 +174,4 @@ function init() {
     }
 }
 
+window.addEventListener("load", init);
